@@ -15,13 +15,9 @@ Console.WriteLine($"{nameof(timeOfDay)}ValidFormatCase:{timeOfDay:HH:mm:ss.ffff}
 
 //Console.WriteLine($"{timeOfDay:yyyy/MM}"); //Format例外
 
-//var useToDateTime = default(DateOnly).ToDateTime(default); // default(DateOnly).ToDateTime(default) == default(DateTime)...use Local Time.
-
 DateTimeOffset dateTimeOffset = default(DateOnly).ToDateTime(default, DateTimeKind.Utc); //Out Of Range Exception...
 
-dateTimeOffset = default(DateOnly).ToDateTime(default); //Out Of Range Exception...
-
-
+//dateTimeOffset = default(DateOnly).ToDateTime(default); //Out Of Range Exception...
 
 var collectionForMinByAndMaxBy = new[] {
     (7, "g-9"),
@@ -63,4 +59,3 @@ Console.WriteLine($"FirstOrDefault:{collectionForRange.FirstOrDefault(i => i > 8
 Console.WriteLine($"FirstOrDefault And Cast To Nullable:{collectionForRange.Cast<int?>().FirstOrDefault(i => i > 8) is null}");
 Console.WriteLine($"FirstOrDefault And Cast To Nullable And Nullish coalescing:{collectionForRange.Cast<int?>().FirstOrDefault(i => i > 8) ?? -1}");
 Console.WriteLine($"FirstOrDefault Use Default Value Injection:{collectionForRange.FirstOrDefault(i => i > 8, -1)}");
-
