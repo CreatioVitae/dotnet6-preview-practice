@@ -38,6 +38,9 @@ Console.WriteLine("OrderBy + FirstOrDefault == MinBy");
 Console.WriteLine(collectionForMinByAndMaxBy.OrderBy(m => m.Item1).FirstOrDefault());
 Console.WriteLine(collectionForMinByAndMaxBy.MinBy(m => m.Item1));
 
+Console.WriteLine(collectionForMinByAndMaxBy.OrderBy(m => m.Item1).ThenBy(m => m.Item2).FirstOrDefault());
+Console.WriteLine(collectionForMinByAndMaxBy.OrderBy(m => m.Item2).MinBy(m => m.Item1));
+
 Console.WriteLine("OrderByDescending + FirstOrDefault == MaxBy");
 Console.WriteLine(collectionForMinByAndMaxBy.OrderByDescending(m => m.Item1).FirstOrDefault());
 Console.WriteLine(collectionForMinByAndMaxBy.MaxBy(m => m.Item1));
