@@ -13,7 +13,7 @@ Console.WriteLine($"{nameof(timeOfDay)}:{timeOfDay}");
 Console.WriteLine($"{nameof(timeOfDay.Second)}:{timeOfDay.Second}");
 Console.WriteLine($"{nameof(timeOfDay)}ValidFormatCase:{timeOfDay:HH:mm:ss.ffff}");
 
-//Console.WriteLine($"{timeOfDay:yyyy/MM}"); //Format例外
+//Console.WriteLine($"{timeOfDay:yyyy/MM}"); //Format Exception...
 
 DateTimeOffset dateTimeOffset = default(DateOnly).ToDateTime(default, DateTimeKind.Utc); //Out Of Range Exception...
 
