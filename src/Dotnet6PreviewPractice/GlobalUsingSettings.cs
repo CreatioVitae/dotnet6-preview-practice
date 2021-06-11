@@ -1,2 +1,2 @@
-﻿global using Date = System.DateOnly;
-global using TimeOfDay = System.TimeOnly;
+global using System;
+global using System.Linq;
